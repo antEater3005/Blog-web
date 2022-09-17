@@ -17,7 +17,7 @@ export default function CreateBlog() {
     })
       .then(() => {
         console.log(`Blog Created`);
-        navigate('/');
+        navigate('/api');
       })
       .catch((err) => {
         console.log(`Cannot create blog`);

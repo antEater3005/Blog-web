@@ -24,7 +24,7 @@ export default function BlogDetails() {
     e.preventDefault();
     axios.delete('/api/blogs/' + id).then((result) => {
       console.log(`Blog deleted`);
-      navigate('/');
+      navigate('/api');
     }).catch(err=>{
       console.log(`There is some error${err}`)
     })
