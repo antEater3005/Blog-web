@@ -10,7 +10,7 @@ export default function BlogDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
-    axios(`/api/blogs/${id}`)
+    axios(`/blogs/${id}`)
       .then((result) => {
         setBlog(result.data);
         setLoading(false);
@@ -22,9 +22,9 @@ export default function BlogDetails() {
   }, [id]);
   const handleDelete = (e) => {
     e.preventDefault();
-    axios.delete('/api/blogs/' + id).then((result) => {
+    axios.delete('/blogs/' + id).then((result) => {
       console.log(`Blog deleted`);
-      navigate('/api');
+      navigate('/');
     }).catch(err=>{
       console.log(`There is some error${err}`)
     })

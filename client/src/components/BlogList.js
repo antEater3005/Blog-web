@@ -5,7 +5,7 @@ export default function BlogList({ blogs }) {
     <div className='blog-list'>
       {blogs.map((blog) => (
         <div className='blogs' key={blog._id}>
-          <a href={`api/blogs/${blog._id}`}>
+          <a href={`/blogs/${blog._id}`}>
             <h2>{blog.title}</h2>
             <p>Author: {blog.author}</p>
             <p id='time'>

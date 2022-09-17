@@ -8,7 +8,7 @@ export default function CreateBlog() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const blog = { title, body, author };
-    fetch('/api/create', {
+    fetch('/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ export default function CreateBlog() {
     })
       .then(() => {
         console.log(`Blog Created`);
-        navigate('/api');
+        navigate('/');
       })
       .catch((err) => {
         console.log(`Cannot create blog`);

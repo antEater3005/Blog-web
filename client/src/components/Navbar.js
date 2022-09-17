@@ -5,8 +5,8 @@ export default function Navbar() {
     <div className='navbar'>
       <h1>Brimstone Blogs</h1>
       <div className='links'>
-        <Link to={'/api'}>Home</Link>
-        <Link to={'/api/create'}>Create</Link>
+        <Link to={'/'}>Home</Link>
+        <Link to={'/create'}>Create</Link>
       </div>
     </div>
   );

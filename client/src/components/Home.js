@@ -6,7 +6,7 @@ export default function Home() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    axios('/api/blogs', { mode: 'no-cors' })
+    axios('/blogs')
       .then((result) => {
         console.log(result);
         setLoading(false);

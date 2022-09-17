@@ -39,7 +39,7 @@ if (
 }
 
 // get list of blogs
-app.get('/api/blogs', (req, res) => {
+app.get('/blogs', (req, res) => {
   Blog.find()
     .sort({ createdAt: -1 })
     .then((result) => {
@@ -52,7 +52,7 @@ app.get('/api/blogs', (req, res) => {
 });
 
 // get single blog
-app.get('/api/blogs/:id', (req, res) => {
+app.get('/blogs/:id', (req, res) => {
   const id = req.params.id;
   // console.log(id);
   Blog.findById(id)
@@ -63,7 +63,7 @@ app.get('/api/blogs/:id', (req, res) => {
 });
 
 // create a new blog
-app.post('/api/create', (req, res) => {
+app.post('/create', (req, res) => {
   const newBlog = new Blog(req.body);
   newBlog
     .save()
@@ -77,7 +77,7 @@ app.post('/api/create', (req, res) => {
 });
 
 // deleting a blog by id
-app.delete('/api/blogs/:id', (req, res) => {
+app.delete('/blogs/:id', (req, res) => {
   const id = req.params.id;
   Blog.findByIdAndDelete(id)
     .then((result) => res.sendStatus(200))
