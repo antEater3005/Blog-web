@@ -3,15 +3,13 @@ const bodyParser = require('body-parser');
 const { default: mongoose } = require('mongoose');
 const morgan = require('morgan');
 const Blog = require('./model/blog_schema');
-const cors = require('cors'); 
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 8800;
 
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
-
-
 
 const dbURI =
   'mongodb+srv://avinash:avi1234@nodetest.suppcli.mongodb.net/nodetest?retryWrites=true&w=majority';
@@ -20,7 +18,7 @@ mongoose
   .connect(dbURI)
   .then((res) => {
     console.log('Connected to mongoDB.');
-    
+
     app.listen(PORT, console.log('Listening to port 8800...'));
   })
   .catch((err) => {
@@ -29,14 +27,16 @@ mongoose
 
 app.use(morgan('dev'));
 
-// heroku 
-if (process.env.NODE_ENV ==='production'|| process.env.NODE_ENV === 'staging') {
+// heroku
+if (
+  process.env.NODE_ENV === 'production' ||
+  process.env.NODE_ENV === 'staging'
+) {
   app.use(express.static('client/build'));
   app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+    res.sendFile(path.join(__dirname + '/client/build/index.html'));
   });
- }
-
+}
 
 // get list of blogs
 app.get('/api/blogs', (req, res) => {
@@ -54,7 +54,7 @@ app.get('/api/blogs', (req, res) => {
 // get single blog
 app.get('/api/blogs/:id', (req, res) => {
   const id = req.params.id;
-  console.log(id);
+  // console.log(id);
   Blog.findById(id)
     .then((result) => res.json(result))
     .catch((err) => {

@@ -9,9 +9,9 @@ function App() {
     <BrowserRouter className='App'>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/create' element={<CreateBlog />} />
-        <Route path='/blogs/:id' element={<BlogDetails />} />
+        <Route path='/api' element={<Home />} />
+        <Route path='/api/create' element={<CreateBlog />} />
+        <Route path='/api/blogs/:id' element={<BlogDetails />} />
       </Routes>
     </BrowserRouter>
   );
