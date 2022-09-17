@@ -39,7 +39,7 @@ if (
 }
 
 // get list of blogs
-app.get('/blogs', (req, res) => {
+app.get('/', (req, res) => {
   Blog.find()
     .sort({ createdAt: -1 })
     .then((result) => {
