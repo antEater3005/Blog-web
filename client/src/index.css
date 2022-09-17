@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: rgb(247, 255, 205);
+}
+/* Navbar */
+.navbar {
+  color: rgb(29, 135, 255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0px 5px 5px 5px;
+  border-bottom: solid 1px rgba(102, 102, 102, 0.464);
+}
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  color: rgb(85, 85, 85);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.navbar a:hover {
+  color: rgb(29, 135, 255);
+  transition: 200ms;
+}
+/* Content */
+
+.content {
+  max-width: 850px;
+  margin: 20px auto;
+}
+.content a {
+  text-decoration: none;
+}
+.content a:hover {
+  color: rgb(226, 63, 229);
+  transition: 200ms;
+}
+.blogs {
+  padding: 5px 10px;
+}
+#time {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(255, 0, 0);
+}
+.blogs {
+  margin-bottom: 10px;
+}
+.blogs:hover {
+  box-shadow: 1px 3px 5px rgba(167, 41, 41, 0.377);
+}
+/* Create new blog */
+
+.create-blog {
+  max-width: 850px;
+  margin: 20px auto;
+}
+.create-blog form {
+  display: flex;
+  margin: 20px 0px 0px 20px;
+  flex-direction: column;
+}
+
+.create-blog label {
+  font-weight: 600;
+  color: blueviolet;
+}
+
+.create-blog input,
+.create-blog textarea {
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border: 1px solid rgb(83, 131, 220);
+  border-radius: 2px;
+}
+
+.create-blog textarea {
+  max-width: 830px;
+  min-height: 300px;
+}
+.create-blog button {
+  width: 50px;
+  margin-top: 20px;
+  background-color: rgb(167, 255, 150);
+  border: 2px solid rgb(148, 251, 69);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/* blog details */
+
+.blog-details {
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 10px;
+  box-shadow: 1px 3px 5px #666;
+  border-radius: 2px;
+}
+.blog-details h1 {
+  color: coral;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+}
+.blog-details p {
+  font-size: 14px;
+}
+.blog-details article {
+  margin: 20px 0px;
+}
+.blog-details button {
+  padding: 3px 5px;
+  border: 1px solid rgba(102, 102, 102, 0.716);
+  border-radius: 3px;
+  background-color: rgba(255, 127, 206, 0.516);
+}
